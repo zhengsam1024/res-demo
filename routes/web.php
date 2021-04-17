@@ -16,3 +16,35 @@
 $router->get('/', function () use ($router) {
     return $router->app->version();
 });
+
+
+$router->group(['prefix' => 'api'], function () use ($router) {
+	// Admin
+	
+	// SalesPeople
+
+	// User
+
+
+	// VERSION Control
+	$router->group(['prefix' => 'v1'], function() use ($router) {
+
+		// 物件查詢
+		$router->group(['prefix' => 'res'], function() use ($router) {
+			$router->get('/', '');
+			$router->post('/', '');
+			$router->patch('/{uid}', '');
+			$router->delete('/{uid}', '');
+			$router->options('/', '');
+		});
+
+		
+
+	});
+});
+
+
+$router->group([], function() use ($router) {
+
+
+});
