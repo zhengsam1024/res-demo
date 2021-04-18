@@ -14,5 +14,12 @@ class DatabaseSeeder extends Seeder
     public function run()
     {
         // $this->call('UsersTableSeeder');
+
+    	dump("出租房型類別 seeder ...");
+    	$resTypes = config("base_res.types");
+    	\App\Models\ResType::query()->firstOrCreate();
+
+
+
     }
 }

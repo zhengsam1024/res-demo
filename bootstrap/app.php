@@ -61,6 +61,11 @@ $app->singleton(
 
 $app->configure('app');
 $app->configure('migrate');
+$app->configure('base_res');
+$app->configure('base_sell');
+$app->configure('base_tags');
+
+
 if ( env('APP_ENV', 'prod') === 'local' ) {
 	$app->configure('tinker');	
 }
